@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { hotelStats } from '../data/hotelData';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function AboutPage() {
   return (
@@ -46,7 +47,7 @@ export default function AboutPage() {
           }}
         >
           <img
-            src="/images/rudraaksh_facade_lights.png"
+            src={getAssetUrl('/images/rudraaksh_facade_lights.png')}
             alt="Hotel Rudraaksh Palace illuminated grand facade"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />

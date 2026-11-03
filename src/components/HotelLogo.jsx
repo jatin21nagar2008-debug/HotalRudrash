@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function HotelLogo({ size = 'md', showText = true }) {
   const isLarge = size === 'lg';
@@ -21,7 +22,7 @@ export default function HotelLogo({ size = 'md', showText = true }) {
         }}
       >
         <img
-          src="/images/rudraaksh_palace_entrance.png"
+          src={getAssetUrl('/images/rudraaksh_palace_entrance.png')}
           alt="Hotel Rudraaksh Palace Logo"
           style={{
             width: '100%',

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -40,7 +40,7 @@ function AppContent() {
 
   const handleOpenBooking = () => {
     // If not on Home page, navigate to Home first
-    if (window.location.pathname !== '/') {
+    if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
         const el = document.getElementById('booking');
@@ -54,7 +54,7 @@ function AppContent() {
 
   const handleBookRoom = (roomId) => {
     setSelectedRoomForBooking(roomId);
-    if (window.location.pathname !== '/') {
+    if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
         const el = document.getElementById('booking');

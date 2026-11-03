@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Award, ShieldCheck, HeartHandshake } from 'lucide-react';
 import { hotelStats } from '../data/hotelData';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function About() {
   return (
@@ -18,7 +19,7 @@ export default function About() {
           >
             <div className="about-image-primary-wrap">
               <img
-                src="/images/rudraaksh_palace_entrance.png"
+                src={getAssetUrl('/images/rudraaksh_palace_entrance.png')}
                 alt="Hotel Rudraaksh Palace grand entrance foyer and architecture"
                 className="about-image-primary"
                 loading="lazy"

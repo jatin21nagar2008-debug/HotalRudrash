@@ -1,10 +1,11 @@
 import React from 'react';
+import { getAssetUrl } from '../utils/assetUrl';
 
 /**
  * SiteBackground Component
- * Renders the hotel's authentic night facade (/images/rudraaksh_facade_lights.png)
+ * Renders the hotel's authentic night facade
  * as the main website background with rich multi-stage dark luxury overlays,
- * warm gold ambient glows, and subtle breathing animation.
+ * warm gold ambient glows, and crisp HD presentation.
  * Ensures maximum text legibility and ultra-premium atmosphere.
  */
 export default function SiteBackground() {
@@ -12,7 +13,7 @@ export default function SiteBackground() {
     <div className="site-luxury-bg-root" aria-hidden="true">
       {/* Background Palace Image - High Resolution Enhanced */}
       <img
-        src="/images/rudraaksh_facade_lights.png"
+        src={getAssetUrl('/images/rudraaksh_facade_lights.png')}
         alt="Hotel Rudraaksh Palace"
         className="site-luxury-bg-image"
         loading="eager"

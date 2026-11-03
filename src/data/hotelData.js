@@ -1,5 +1,6 @@
 // Comprehensive Hotel Rudrash Data & Content Store
 // Note: All operational metrics, testimonials, and promotional rates are sample demo data for presentation purposes.
+import { getAssetUrl } from '../utils/assetUrl';
 
 export const hotelInfo = {
   name: "Hotel Rudraaksh Palace",
@@ -24,7 +25,7 @@ export const heroSlides = [
     title: "Experience Luxury. Feel at Home.",
     subtitle: "Discover exceptional hospitality, elegant comfort, and unforgettable royal experiences at Hotel Rudraaksh Palace.",
     badge: "Hotel Rudraaksh Palace",
-    image: "/images/rudraaksh_facade_lights.png",
+    image: getAssetUrl("/images/rudraaksh_facade_lights.png"),
     tag: "Illuminated Grandeur",
   },
   {
@@ -32,7 +33,7 @@ export const heroSlides = [
     title: "Sanctuary of Grand Moments & Celebrations.",
     subtitle: "From lavish stays to memorable wedding banquets, experience regal hospitality at Hotel Rudraaksh Palace.",
     badge: "Grand Welcome",
-    image: "/images/rudraaksh_palace_entrance.png",
+    image: getAssetUrl("/images/rudraaksh_palace_entrance.png"),
     tag: "Palatial Comfort",
   },
   {
@@ -40,7 +41,7 @@ export const heroSlides = [
     title: "Modern Elegance & Sovereign Comfort.",
     subtitle: "Step into our luminous glass foyer, unwind in style, and indulge in tailored luxury curated just for you.",
     badge: "Architectural Splendor",
-    image: "/images/rudraaksh_blue_exterior.png",
+    image: getAssetUrl("/images/rudraaksh_blue_exterior.png"),
     tag: "Exquisite Living",
   },
 ];
@@ -292,7 +293,7 @@ export const galleryItems = [
     title: "Illuminated Palace Facade by Night",
     category: "exterior",
     categoryLabel: "Hotel Exterior",
-    image: "/images/rudraaksh_facade_lights.png",
+    image: getAssetUrl("/images/rudraaksh_facade_lights.png"),
     caption: "The majestic presence of Hotel Rudraaksh Palace illuminated by celebratory fairy lights and glowing marquee signage.",
   },
   {
@@ -300,7 +301,7 @@ export const galleryItems = [
     title: "Grand Entrance & Reception Marquee",
     category: "exterior",
     categoryLabel: "Hotel Exterior",
-    image: "/images/rudraaksh_palace_entrance.png",
+    image: getAssetUrl("/images/rudraaksh_palace_entrance.png"),
     caption: "The warm decorated entry and double-height architectural glass foyer welcoming guests to Hotel Rudraaksh Palace.",
   },
   {
@@ -308,7 +309,7 @@ export const galleryItems = [
     title: "Palace Architectural Elevation",
     category: "exterior",
     categoryLabel: "Hotel Exterior",
-    image: "/images/rudraaksh_blue_exterior.png",
+    image: getAssetUrl("/images/rudraaksh_blue_exterior.png"),
     caption: "Contemporary multi-story architecture with neon illuminated crown signage and modern double-height glass lobby.",
   },
   {

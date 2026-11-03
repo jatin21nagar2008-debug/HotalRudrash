@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { hotelInfo } from '../data/hotelData';
 import { WhatsAppIcon, InstagramIcon } from './Navbar';
+import { getAssetUrl } from '../utils/assetUrl';
 
 const realPhotos = [
   {
@@ -19,21 +20,21 @@ const realPhotos = [
     title: 'Illuminated Palace Entrance',
     desc: 'Grand decorated reception and illuminated hotel marquee',
     badge: 'Palatial Grandeur',
-    src: '/images/rudraaksh_palace_entrance.png',
+    src: getAssetUrl('/images/rudraaksh_palace_entrance.png'),
   },
   {
     id: 2,
     title: 'Festive Facade by Night',
     desc: 'Luminous fairy light decorations on the grand multi-story facade',
     badge: 'Illuminated Night View',
-    src: '/images/rudraaksh_facade_lights.png',
+    src: getAssetUrl('/images/rudraaksh_facade_lights.png'),
   },
   {
     id: 3,
     title: 'Contemporary Glass Elevation',
     desc: 'Modern architecture with glowing blue crown neon lettering',
     badge: 'Modern Architecture',
-    src: '/images/rudraaksh_blue_exterior.png',
+    src: getAssetUrl('/images/rudraaksh_blue_exterior.png'),
   },
 ];
 
