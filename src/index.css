@@ -1,0 +1,508 @@
+/* ==========================================================================
+   HOTEL RUDRASH — LUXURY DESIGN SYSTEM & STYLESHEET
+   Aesthetics: Deep Obsidian (#0B0C10), Royal Gold (#D4AF37), Imperial Champagne
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Dark & Luxury */
+  --bg-primary: #0b0c10;
+  --bg-secondary: #12141c;
+  --bg-tertiary: #191b26;
+  --bg-card: rgba(18, 20, 29, 0.82);
+  --bg-card-hover: rgba(26, 30, 44, 0.94);
+  --bg-glass: rgba(11, 12, 16, 0.78);
+  --bg-glass-light: rgba(255, 255, 255, 0.05);
+
+  /* Gold & Accent Scale */
+  --gold-primary: #d4af37;
+  --gold-light: #f3e5ab;
+  --gold-hover: #e5c158;
+  --gold-dark: #a98722;
+  --gold-subtle: rgba(212, 175, 55, 0.16);
+  --gold-glow: 0 0 25px rgba(212, 175, 55, 0.38);
+  --gold-gradient: linear-gradient(135deg, #f6e8b8 0%, #d4af37 50%, #aa8725 100%);
+  --gold-gradient-hover: linear-gradient(135deg, #ffffff 0%, #f6e8b8 45%, #d4af37 100%);
+  --dark-gradient: linear-gradient(180deg, rgba(11, 12, 16, 0.2) 0%, rgba(11, 12, 16, 0.95) 100%);
+
+  /* Official Brand Colors */
+  --whatsapp-green: #25d366;
+  --whatsapp-dark: #128c7e;
+  --whatsapp-glow: 0 0 22px rgba(37, 211, 102, 0.5);
+  --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  --instagram-glow: 0 0 22px rgba(225, 48, 108, 0.5);
+
+  /* Neutral Text & Accents (High Contrast Legibility) */
+  --text-primary: #ffffff;
+  --text-secondary: #f0ece3;
+  --text-muted: #aca79c;
+  --text-gold: #e5c158;
+  --border-subtle: rgba(212, 175, 55, 0.2);
+  --border-card: rgba(255, 255, 255, 0.09);
+  --border-highlight: rgba(212, 175, 55, 0.58);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Cormorant Garamond', Garamond, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.65);
+  --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.22);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+}
+
+/* Base Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  line-height: 1.68;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--gold-primary);
+  color: #0b0c10;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282a38;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.22;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   GLOBAL WEBSITE LUXURY BACKGROUND
+   Authentic palace night facade with crystal-clear radiant lighting
+   ========================================================================== */
+.site-luxury-bg-root {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.site-luxury-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  filter: brightness(1.05) contrast(1.12) saturate(1.15);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.site-luxury-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 12, 18, 0.18) 0%,
+    rgba(10, 12, 18, 0.12) 25%,
+    rgba(10, 12, 18, 0.28) 60%,
+    rgba(10, 12, 18, 0.58) 85%,
+    rgba(10, 12, 18, 0.88) 100%
+  );
+}
+
+.site-luxury-bg-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 85% 15%, rgba(212, 175, 55, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse at 15% 75%, rgba(212, 175, 55, 0.14) 0%, transparent 55%);
+}
+
+.site-luxury-bg-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 65%, rgba(10, 12, 18, 0.35) 100%);
+}
+
+/* Layout Utilities */
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-padding {
+  padding: 4.5rem 0;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .section-padding {
+    padding: 5.75rem 0;
+  }
+}
+
+/* Page Transition Wrapper */
+.page-transition-wrap {
+  min-height: 80vh;
+}
+
+/* Section Header Typography */
+.section-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 2.75rem auto;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+}
+
+.section-eyebrow::before,
+.section-eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--gold-primary);
+  opacity: 0.6;
+}
+
+.section-title {
+  font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+}
+
+.section-subtitle {
+  font-size: 1.08rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.gold-gradient-text {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Premium Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.92rem 1.95rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #0b0c10;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+  font-weight: 700;
+}
+
+.btn-gold:hover {
+  background: var(--gold-gradient-hover);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn-lg-glow {
+  padding: 1.05rem 2.2rem;
+  font-size: 0.96rem;
+}
+
+.btn-outline-gold {
+  background: rgba(18, 20, 29, 0.6);
+  color: var(--gold-light);
+  border: 1.5px solid var(--gold-primary);
+  backdrop-filter: blur(10px);
+}
+
+.btn-outline-gold:hover {
+  background: rgba(212, 175, 55, 0.18);
+  color: #ffffff;
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.3);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+}
+
+/* Glassmorphism Card Utilities */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.glass-panel:hover {
+  border-color: var(--border-highlight);
+  box-shadow: var(--shadow-lg), var(--shadow-gold);
+}
+
+.glass-panel-elevated {
+  background: rgba(18, 20, 30, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(212, 175, 55, 0.32);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.15);
+}
+
+/* Demo Badges & Disclaimers */
+.demo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(212, 175, 55, 0.14);
+  color: var(--gold-light);
+  border: 1px solid rgba(212, 175, 55, 0.32);
+  padding: 0.28rem 0.72rem;
+  border-radius: var(--radius-full);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.demo-disclaimer-bar {
+  background: rgba(14, 16, 24, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8rem;
+  color: #dfdbd1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1002;
+}
+
+.demo-disclaimer-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.disclaimer-insta-link {
+  color: var(--gold-light);
+  text-decoration: underline;
+  font-weight: 700;
+  margin-left: 0.25rem;
+  transition: color var(--transition-fast);
+}
+
+.disclaimer-insta-link:hover {
+  color: #ffffff;
+}
+
+.disclaimer-close-btn {
+  background: transparent;
+  color: #a7a398;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.disclaimer-close-btn:hover {
+  color: #ffffff;
+}
+
+/* Modal Overlay & Base Content */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 7, 10, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: #12141e;
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-lg);
+  max-width: 760px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85), 0 0 35px rgba(212, 175, 55, 0.25);
+}
+
+/* Lightbox close button */
+.lightbox-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(18, 20, 28, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: all var(--transition-fast);
+}
+
+.lightbox-close-btn:hover {
+  background: var(--gold-primary);
+  color: #0b0c10;
+  transform: rotate(90deg);
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
