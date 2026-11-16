@@ -129,11 +129,10 @@ export default function Navbar({ onOpenBooking }) {
               target="_blank"
               rel="noopener noreferrer"
               className="nav-social-pill nav-whatsapp-pill"
-              title="Chat with Hotel Rudraaksh Palace on WhatsApp"
-              aria-label="WhatsApp Chat"
+              aria-label="Chat with Hotel Rudraaksh Palace on WhatsApp"
             >
               <span className="nav-social-icon-circle whatsapp-circle">
-                <WhatsAppIcon size={14} color="#ffffff" />
+                <WhatsAppIcon size={15} color="#ffffff" />
               </span>
               <span className="nav-social-label">WhatsApp</span>
             </a>
@@ -144,11 +143,10 @@ export default function Navbar({ onOpenBooking }) {
               target="_blank"
               rel="noopener noreferrer"
               className="nav-social-pill nav-instagram-pill"
-              title="Follow Hotel Rudraaksh Palace on Instagram"
-              aria-label="Instagram Profile"
+              aria-label="Follow Hotel Rudraaksh Palace on Instagram"
             >
               <span className="nav-social-icon-circle insta-circle">
-                <InstagramIcon size={14} color="#ffffff" />
+                <InstagramIcon size={15} color="#ffffff" />
               </span>
               <span className="nav-social-label">Instagram</span>
             </a>
