@@ -523,9 +523,13 @@
   .nav-social-pill {
     display: none !important;
   }
+  /* On mobile: Hide Book Stay button from top header, moving it down */
+  .btn-nav-book {
+    display: none !important;
+  }
 }
 
-/* Book Stay CTA Button */
+/* Book Stay CTA Button (Desktop) */
 .btn-nav-book {
   display: inline-flex !important;
   align-items: center !important;
@@ -570,14 +574,6 @@
   }
 }
 
-@media (max-width: 480px) {
-  .btn-nav-book {
-    padding: 0.45rem 0.75rem !important;
-    font-size: 0.72rem !important;
-    gap: 0.35rem !important;
-  }
-}
-
 /* Hamburger button with morphing lines */
 .hamburger-btn {
   display: flex;
@@ -598,9 +594,9 @@
 
 @media (max-width: 480px) {
   .hamburger-btn {
-    width: 38px;
-    height: 38px;
-    padding: 7px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
   }
 }
   cursor: pointer;
@@ -3308,184 +3304,467 @@
 /* --------------------------------------------------------------------------
    15. COMPREHENSIVE LUXURY MOBILE & RESPONSIVE POLISH
    -------------------------------------------------------------------------- */
-@media (max-width: 991px) {
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 2.75rem;
-  }
+/* Mobile Luxury Sticky Bottom Bar (Moves Book Stay down for mobile) */
+.mobile-sticky-bottom-bar {
+  display: none;
 }
 
 @media (max-width: 768px) {
-  .section-padding {
-    padding: 3.5rem 0;
-  }
-  .section-header {
-    margin-bottom: 2rem;
-  }
-  .section-eyebrow {
-    font-size: 0.82rem;
-    letter-spacing: 0.18em;
-  }
-  .section-title {
-    font-size: clamp(1.8rem, 5.5vw, 2.4rem);
-  }
-  .section-subtitle {
-    font-size: 0.95rem;
-  }
-  .dining-showcase-grid {
-    grid-template-columns: 1fr;
-    gap: 1.75rem;
-  }
-  .offers-grid {
-    grid-template-columns: 1fr;
-    gap: 1.75rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    padding: 0 1rem;
-  }
-
-  .booking-panel {
-    padding: 1.25rem;
-  }
-
-  /* Floating concierge mobile polish */
-  .floating-social-dock {
-    bottom: 1.15rem;
-    right: 0.85rem;
-  }
-
-  .floating-social-buttons {
-    gap: 0.65rem;
-  }
-
-  .floating-btn {
-    width: 46px;
-    height: 46px;
-  }
-
-  .floating-tooltip {
+  .desktop-only {
     display: none !important;
   }
 
-  /* Amenities & Cards */
-  .amenity-card {
-    padding: 1.5rem 1.25rem;
+  .mobile-sticky-bottom-bar {
+    display: block !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1050 !important;
+    background: rgba(10, 12, 18, 0.94) !important;
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    border-top: 1px solid rgba(212, 175, 55, 0.35) !important;
+    padding: 0.65rem 1rem !important;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.15) !important;
   }
 
-  .dining-card-body {
-    padding: 1.35rem 1rem;
+  .mobile-bottom-bar-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.65rem !important;
+    max-width: 540px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
   }
 
-  .dining-card-title {
-    font-size: 1.25rem;
+  .mobile-bottom-icon-pill {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+    transition: transform var(--transition-fast) !important;
   }
 
-  .dining-card-timings {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
+  .mobile-bottom-icon-pill.whatsapp {
+    background: #25d366 !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
   }
 
-  /* Testimonials */
-  .testimonial-card {
-    padding: 2rem 1.25rem;
+  .mobile-bottom-icon-pill.instagram {
+    background: var(--instagram-gradient) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
   }
 
-  .testimonial-quote-text {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+  .mobile-bottom-reserve-btn {
+    flex: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.55rem !important;
+    height: 44px !important;
+    border-radius: 9999px !important;
+    background: var(--gold-gradient) !important;
+    color: #0b0c10 !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.45) !important;
+    border: none !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
   }
 
-  .testimonial-author-row {
-    gap: 0.85rem;
-  }
-
-  .testimonial-avatar-wrap {
-    width: 48px;
-    height: 48px;
-  }
-
-  /* About stats */
-  .about-features-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .stat-item-card {
-    padding: 1rem 0.75rem;
-  }
-
-  .stat-value,
-  .stat-number {
-    font-size: 1.5rem;
-  }
-
-  /* Contact */
-  .contact-card-box {
-    padding: 1.5rem 1.25rem;
-  }
-
-  .contact-form-box {
-    padding: 1.75rem 1.25rem;
-  }
-
-  .contact-form-title {
-    font-size: 1.6rem;
-  }
-
-  /* Footer */
+  /* Extra padding at bottom so sticky bottom bar doesn't cover footer text */
   .footer-wrapper {
-    padding: 3.5rem 0 2rem 0;
+    padding-bottom: 6rem !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   15. 100% FULL-WIDTH LUXURY RESPONSIVE ENFORCEMENT FOR EVERY SECTION
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  html,
+  body,
+  #root,
+  .app-layout {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2.25rem;
-    margin-bottom: 2.5rem;
+  .container,
+  .container-narrow {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: clamp(0.85rem, 3.5vw, 1.25rem) !important;
+    padding-right: clamp(0.85rem, 3.5vw, 1.25rem) !important;
+    box-sizing: border-box !important;
   }
 
-  .footer-bottom-bar {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.75rem;
+  /* 1. Hero Showcase: 100% Full Width */
+  .hero-prime-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    padding: 5rem 0 2rem 0 !important;
+    box-sizing: border-box !important;
   }
 
-  /* Modals */
-  .modal-overlay {
-    padding: 0.65rem;
+  .hero-prime-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 2rem !important;
+    box-sizing: border-box !important;
   }
 
-  .modal-content {
-    padding: 1.5rem 1rem !important;
-    border-radius: var(--radius-md);
-    max-height: 94vh;
+  .hero-prime-text-col,
+  .hero-showcase-card-col {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
-  .lightbox-close-btn {
-    top: 0.75rem;
-    right: 0.75rem;
-    width: 36px;
-    height: 36px;
+  .hero-badge-wrap {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-start !important;
   }
 
-  .lightbox-caption-bar {
-    padding: 1rem 1.25rem;
-    flex-direction: column;
-    gap: 0.75rem;
+  .hero-badge {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-headline {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(2rem, 7.5vw, 2.85rem) !important;
+  }
+
+  .hero-subheadline {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(0.94rem, 3vw, 1.05rem) !important;
+    line-height: 1.65 !important;
+  }
+
+  .hero-cta-group {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.85rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-cta-group .btn {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0.95rem 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-social-connect-bar {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 0.85rem 1rem !important;
+    gap: 0.65rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-social-pills-row {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.65rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-social-connect-bar .nav-social-pill {
+    width: 100% !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    padding: 0.65rem 0.85rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-trust-bar {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    padding: 0.85rem 1rem !important;
+    background: rgba(14, 16, 26, 0.65) !important;
+    border: 1px solid rgba(212, 175, 55, 0.2) !important;
+    border-radius: var(--radius-sm) !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-trust-separator {
+    display: none !important;
+  }
+
+  .hero-trust-item {
+    font-size: 0.8rem !important;
+    justify-content: center !important;
+  }
+
+  .hero-showcase-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.25rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-showcase-frame {
+    width: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .hero-thumb-grid {
+    width: 100% !important;
+  }
+
+  /* 2. Valora Heights Booking Capsule: 100% Full Width */
+  .booking-section-wrapper,
+  .valora-booking-container,
+  .valora-booking-capsule {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .booking-section-wrapper {
+    margin-top: -1.5rem !important;
+    padding: 0 clamp(0.75rem, 3vw, 1rem) !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .valora-booking-capsule {
+    border-radius: var(--radius-md) !important;
+    padding: 1.25rem 1rem !important;
+  }
+
+  .valora-booking-form {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .valora-field-unit {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 0 0 0.65rem 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .valora-submit-col,
+  .valora-capsule-submit-btn {
+    width: 100% !important;
+    padding-left: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. About Section: 100% Full Width */
+  .about-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 2.25rem !important;
+  }
+
+  .about-visual-column,
+  .about-image-primary-wrap,
+  .about-floating-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-features-grid,
+  .about-stats-grid {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 4. Rooms Section: 100% Full Width */
+  #rooms,
+  .rooms-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .room-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .room-card-actions {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+
+  /* 5. Amenities Section: 100% Full Width */
+  #amenities,
+  .amenities-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .amenity-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.5rem 1.25rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 6. Dining Section: 100% Full Width */
+  #dining,
+  .dining-showcase-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .dining-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .dining-card-body {
+    padding: 1.35rem 1rem !important;
+  }
+
+  .dining-card-timings {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.3rem !important;
+  }
+
+  /* 7. Gallery Section: 100% Full Width */
+  #gallery,
+  .gallery-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .gallery-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 8. Testimonials Section: 100% Full Width */
+  #testimonials,
+  .testimonials-carousel-box,
+  .testimonial-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .testimonial-card {
+    padding: 2rem 1.25rem !important;
+  }
+
+  /* 9. Offers Section: 100% Full Width */
+  #offers,
+  .offers-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .offer-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 10. Contact Section: 100% Full Width */
+  #contact,
+  .contact-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 2rem !important;
+  }
+
+  .contact-info-col,
+  .contact-card-box,
+  .contact-form-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-fields-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+
+  /* 11. Footer Section: 100% Full Width */
+  .footer-wrapper,
+  .footer-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 2.25rem !important;
+    box-sizing: border-box !important;
   }
 }
 
 @media (max-width: 480px) {
+  .hero-social-pills-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-trust-bar {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .hero-showcase-card {
+    padding: 1rem !important;
+  }
+
   .btn {
     padding: 0.75rem 1.35rem;
     font-size: 0.84rem;
@@ -3494,10 +3773,5 @@
   .btn-sm {
     padding: 0.55rem 0.95rem;
     font-size: 0.78rem;
-  }
-
-  .section-eyebrow::before,
-  .section-eyebrow::after {
-    width: 16px;
   }
 }

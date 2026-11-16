@@ -165,8 +165,8 @@ function AppContent() {
       {/* Persistent Luxury Footer */}
       <Footer onOpenBooking={handleOpenBooking} />
 
-      {/* Quick Connect Floating Social Dock (WhatsApp & Instagram) */}
-      <FloatingSocialConcierge />
+      {/* Quick Connect Floating Social Dock (WhatsApp & Instagram) & Mobile Bottom Booking Bar */}
+      <FloatingSocialConcierge onOpenBooking={handleOpenBooking} />
 
       {/* Booking Confirmation / Demo Summary Modal */}
       <BookingConfirmationModal
