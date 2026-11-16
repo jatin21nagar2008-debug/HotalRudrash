@@ -42,10 +42,12 @@ export default function DiningPage() {
         <div
           style={{
             position: 'relative',
-            height: '420px',
+            minHeight: '280px',
+            maxHeight: '420px',
+            height: '40vw',
             borderRadius: 'var(--radius-lg)',
             overflow: 'hidden',
-            marginBottom: '4.5rem',
+            marginBottom: '3.5rem',
             border: '1px solid rgba(212,175,55,0.25)',
           }}
         >

@@ -143,7 +143,7 @@ export default function Hero({ onOpenBooking, onExploreRooms }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nav-social-pill nav-whatsapp-pill"
-                title="Chat with Hotel Rudraaksh Palace on WhatsApp"
+                aria-label="Chat with Hotel Rudraaksh Palace on WhatsApp"
               >
                 <span className="nav-social-icon-circle whatsapp-circle">
                   <WhatsAppIcon size={14} color="#ffffff" />
@@ -157,7 +157,7 @@ export default function Hero({ onOpenBooking, onExploreRooms }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nav-social-pill nav-instagram-pill"
-                title="Follow Hotel Rudraaksh Palace on Instagram"
+                aria-label="Follow Hotel Rudraaksh Palace on Instagram"
               >
                 <span className="nav-social-icon-circle insta-circle">
                   <InstagramIcon size={14} color="#ffffff" />

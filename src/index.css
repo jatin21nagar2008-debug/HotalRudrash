@@ -76,6 +76,8 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   color-scheme: dark;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
@@ -84,8 +86,18 @@ body {
   color: var(--text-secondary);
   line-height: 1.68;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root,
+.app-layout {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
 }
 
 ::selection {
@@ -207,25 +219,19 @@ button {
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 clamp(0.85rem, 3.5vw, 1.5rem);
 }
 
 .container-narrow {
   width: 100%;
   max-width: 1060px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 clamp(0.85rem, 3.5vw, 1.5rem);
 }
 
 .section-padding {
-  padding: 4.5rem 0;
+  padding: clamp(3.25rem, 7vw, 5.75rem) 0;
   position: relative;
-}
-
-@media (min-width: 992px) {
-  .section-padding {
-    padding: 5.75rem 0;
-  }
 }
 
 /* Page Transition Wrapper */

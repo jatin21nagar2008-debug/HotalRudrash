@@ -159,7 +159,8 @@ export default function Navbar({ onOpenBooking }) {
               aria-label="Book your stay"
             >
               <Calendar size={14} />
-              <span>Book Stay</span>
+              <span className="nav-book-text-full">Book Stay</span>
+              <span className="nav-book-text-short">Book</span>
             </button>
 
             {/* Mobile Hamburger Button with Animated Morphing Lines */}
