@@ -137,33 +137,35 @@ export default function Hero({ onOpenBooking, onExploreRooms }) {
                 Instant Concierge:
               </span>
 
-              {/* WhatsApp Pill */}
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="nav-social-pill nav-whatsapp-pill"
-                aria-label="Chat with Hotel Rudraaksh Palace on WhatsApp"
-              >
-                <span className="nav-social-icon-circle whatsapp-circle">
-                  <WhatsAppIcon size={14} color="#ffffff" />
-                </span>
-                <span>WhatsApp Desk</span>
-              </a>
+              <div className="hero-social-pills-row">
+                {/* WhatsApp Pill */}
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-social-pill nav-whatsapp-pill"
+                  aria-label="Chat with Hotel Rudraaksh Palace on WhatsApp"
+                >
+                  <span className="nav-social-icon-circle whatsapp-circle">
+                    <WhatsAppIcon size={14} color="#ffffff" />
+                  </span>
+                  <span>WhatsApp Desk</span>
+                </a>
 
-              {/* Instagram Pill */}
-              <a
-                href={hotelInfo.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="nav-social-pill nav-instagram-pill"
-                aria-label="Follow Hotel Rudraaksh Palace on Instagram"
-              >
-                <span className="nav-social-icon-circle insta-circle">
-                  <InstagramIcon size={14} color="#ffffff" />
-                </span>
-                <span>{hotelInfo.instagramHandle}</span>
-              </a>
+                {/* Instagram Pill */}
+                <a
+                  href={hotelInfo.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-social-pill nav-instagram-pill"
+                  aria-label="Follow Hotel Rudraaksh Palace on Instagram"
+                >
+                  <span className="nav-social-icon-circle insta-circle">
+                    <InstagramIcon size={14} color="#ffffff" />
+                  </span>
+                  <span>{hotelInfo.instagramHandle}</span>
+                </a>
+              </div>
             </motion.div>
 
             {/* Key Trust Signals Ribbon */}

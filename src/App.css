@@ -832,6 +832,7 @@
   grid-template-columns: 1fr;
   gap: 2.5rem;
   align-items: center;
+  width: 100%;
 }
 
 @media (min-width: 992px) {
@@ -839,6 +840,16 @@
     grid-template-columns: 1.12fr 0.88fr;
     gap: 3.75rem;
   }
+}
+
+.hero-prime-text-col {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-showcase-card-col {
+  width: 100%;
+  max-width: 100%;
 }
 
 .hero-badge-wrap {
@@ -927,19 +938,6 @@
   margin-bottom: 2rem;
 }
 
-@media (max-width: 640px) {
-  .hero-cta-group {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-  }
-  .hero-cta-group .btn {
-    width: 100% !important;
-    justify-content: center !important;
-  }
-}
-
 .hero-social-connect-bar {
   display: flex;
   align-items: center;
@@ -955,32 +953,18 @@
   max-width: 100%;
 }
 
-@media (max-width: 640px) {
-  .hero-social-connect-bar {
-    width: 100%;
-    justify-content: center;
-    gap: 0.6rem;
-    padding: 0.65rem 0.85rem;
-    margin-bottom: 1.5rem;
-  }
-  .hero-social-connect-bar .nav-social-pill {
-    display: inline-flex !important;
-    font-size: 0.75rem !important;
-    padding: 0.4rem 0.75rem !important;
-  }
-  .hero-social-label {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 0.2rem;
-  }
-}
-
 .hero-social-label {
   font-size: 0.78rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 600;
+}
+
+.hero-social-pills-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
 }
 
 .hero-trust-bar {
@@ -990,15 +974,6 @@
   color: #c9c5ba;
   font-size: 0.85rem;
   flex-wrap: wrap;
-}
-
-@media (max-width: 640px) {
-  .hero-trust-bar {
-    justify-content: center;
-    gap: 0.4rem 0.75rem;
-    font-size: 0.78rem;
-    text-align: center;
-  }
 }
 
 .hero-trust-item {
@@ -1014,8 +989,146 @@
 
 /* Hero Showcase Card */
 .hero-showcase-card {
+  width: 100%;
+  max-width: 100%;
   padding: 1.5rem;
+  box-sizing: border-box;
   transition: all var(--transition-normal);
+}
+
+/* Mobile & Tablet Full-Width Hero Rules (< 991px) */
+@media (max-width: 991px) {
+  .hero-prime-text-col,
+  .hero-showcase-card-col {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hero-badge-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .hero-badge {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .hero-headline {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-subheadline {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-cta-group {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.85rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .hero-cta-group .btn {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0.95rem 1.5rem !important;
+    font-size: 0.92rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-social-connect-bar {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.65rem !important;
+    padding: 0.85rem 1rem !important;
+    margin-bottom: 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-social-connect-bar .hero-social-label {
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-social-pills-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+  }
+
+  .hero-social-connect-bar .nav-social-pill {
+    width: 100% !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    padding: 0.65rem 0.85rem !important;
+    font-size: 0.8rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-trust-bar {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    padding: 0.85rem 1rem !important;
+    background: rgba(14, 16, 26, 0.65) !important;
+    border: 1px solid rgba(212, 175, 55, 0.2) !important;
+    border-radius: var(--radius-sm) !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-trust-separator {
+    display: none !important;
+  }
+
+  .hero-trust-item {
+    font-size: 0.8rem !important;
+    justify-content: center !important;
+  }
+
+  .hero-showcase-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.25rem !important;
+    margin-top: 0.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-showcase-frame {
+    width: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-social-pills-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-trust-bar {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .hero-showcase-card {
+    padding: 1rem !important;
+  }
 }
 
 .hero-showcase-card:hover {
