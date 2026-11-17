@@ -83,7 +83,9 @@ const BookingForm = forwardRef(function BookingForm({ onConfirmBooking, initialR
     setTimeout(() => {
       setIsLoading(false);
       if (onConfirmBooking) {
+        const randomCode = Math.floor(100000 + Math.random() * 900000);
         onConfirmBooking({
+          confirmationId: `RDR-${randomCode}`,
           checkIn,
           checkOut,
           guests: Number(guests),

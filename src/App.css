@@ -160,10 +160,12 @@
     transform: scale(0.95);
     opacity: 0.8;
   }
+
   70% {
     transform: scale(1.35);
     opacity: 0;
   }
+
   100% {
     transform: scale(1.4);
     opacity: 0;
@@ -271,10 +273,12 @@
     height: 34px;
     border-radius: 8px;
   }
+
   .hotel-logo-title {
     font-size: 0.88rem;
     letter-spacing: 0.02em;
   }
+
   .hotel-logo-subtitle {
     font-size: 0.52rem;
     letter-spacing: 0.16em;
@@ -286,9 +290,11 @@
     width: 30px;
     height: 30px;
   }
+
   .hotel-logo-title {
     font-size: 0.78rem;
   }
+
   .hotel-logo-subtitle {
     display: none;
   }
@@ -504,6 +510,7 @@
   .nav-social-label {
     display: none !important;
   }
+
   .nav-social-pill {
     padding: 0 !important;
     border-radius: 50% !important;
@@ -513,6 +520,7 @@
     justify-content: center !important;
     align-items: center !important;
   }
+
   .nav-social-icon-circle {
     width: 22px !important;
     height: 22px !important;
@@ -523,6 +531,7 @@
   .nav-social-pill {
     display: none !important;
   }
+
   /* On mobile: Hide Book Stay button from top header, moving it down */
   .btn-nav-book {
     display: none !important;
@@ -569,6 +578,7 @@
   .nav-book-text-full {
     display: none !important;
   }
+
   .nav-book-text-short {
     display: inline !important;
   }
@@ -599,8 +609,9 @@
     padding: 8px;
   }
 }
-  cursor: pointer;
-  transition: all var(--transition-fast);
+
+cursor: pointer;
+transition: all var(--transition-fast);
 }
 
 .hamburger-btn:hover {
@@ -994,6 +1005,7 @@
 
 /* Mobile & Tablet Full-Width Hero Rules (< 991px) */
 @media (max-width: 991px) {
+
   .hero-prime-text-col,
   .hero-showcase-card-col {
     width: 100% !important;
@@ -1306,7 +1318,7 @@
   border: 1.5px solid rgba(212, 175, 55, 0.38);
   border-radius: 9999px;
   padding: 0.75rem 1rem 0.75rem 1.5rem;
-  box-shadow: 
+  box-shadow:
     0 24px 60px rgba(0, 0, 0, 0.75),
     0 0 35px rgba(212, 175, 55, 0.14),
     inset 0 1px 1px rgba(255, 255, 255, 0.15);
@@ -1315,7 +1327,7 @@
 
 .valora-booking-capsule:hover {
   border-color: rgba(212, 175, 55, 0.65);
-  box-shadow: 
+  box-shadow:
     0 30px 75px rgba(0, 0, 0, 0.85),
     0 0 45px rgba(212, 175, 55, 0.25),
     inset 0 1px 1px rgba(255, 255, 255, 0.25);
@@ -1799,9 +1811,11 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
+
   .filter-tabs-wrapper::-webkit-scrollbar {
     display: none;
   }
+
   .filter-tab-btn {
     flex-shrink: 0;
     white-space: nowrap;
@@ -2014,6 +2028,7 @@
   .room-card-body {
     padding: 1.25rem 1rem;
   }
+
   .room-card-title {
     font-size: 1.25rem;
   }
@@ -2417,6 +2432,7 @@
   .lightbox-prev-btn {
     left: 0.5rem;
   }
+
   .lightbox-next-btn {
     right: 0.5rem;
   }
@@ -3391,6 +3407,7 @@
    15. 100% FULL-WIDTH LUXURY RESPONSIVE ENFORCEMENT FOR EVERY SECTION
    -------------------------------------------------------------------------- */
 @media (max-width: 991px) {
+
   html,
   body,
   #root,
@@ -3773,5 +3790,199 @@
   .btn-sm {
     padding: 0.55rem 0.95rem;
     font-size: 0.78rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   16. BOOKING CONFIRMATION MODAL & PRINT STYLES
+   -------------------------------------------------------------------------- */
+.booking-confirmation-content {
+  padding: 2.25rem 1.85rem !important;
+  max-width: 680px !important;
+}
+
+.booking-modal-title {
+  font-size: clamp(1.4rem, 4vw, 2.1rem) !important;
+}
+
+@media (max-width: 640px) {
+  .modal-overlay {
+    padding: 0.75rem !important;
+  }
+
+  .booking-confirmation-content {
+    padding: 1.5rem 1rem !important;
+    max-height: 94vh !important;
+  }
+
+  .booking-modal-title {
+    font-size: 1.35rem !important;
+  }
+
+  .booking-summary-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+
+  .booking-summary-header > div:last-child {
+    text-align: left !important;
+  }
+
+  .booking-modal-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.6rem !important;
+  }
+
+  .booking-modal-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* Clean Media Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .booking-confirmation-overlay,
+  .booking-confirmation-content,
+  .booking-confirmation-content * {
+    visibility: visible !important;
+  }
+
+  .booking-confirmation-overlay {
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .booking-confirmation-content {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+    border: 2px solid #d4af37 !important;
+    box-shadow: none !important;
+    padding: 2rem !important;
+  }
+
+  .lightbox-close-btn,
+  .booking-modal-actions,
+  .demo-pill,
+  .copy-code-btn {
+    display: none !important;
+  }
+
+  .booking-confirmation-content h2,
+  .booking-confirmation-content h3,
+  .booking-confirmation-content div,
+  .booking-confirmation-content p,
+  .booking-confirmation-content span {
+    color: #111111 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   16. BOOKING CONFIRMATION MODAL & PRINT STYLES
+   -------------------------------------------------------------------------- */
+.booking-confirmation-content {
+  padding: 2.25rem 1.85rem !important;
+  max-width: 680px !important;
+}
+
+.booking-modal-title {
+  font-size: clamp(1.4rem, 4vw, 2.1rem) !important;
+}
+
+@media (max-width: 640px) {
+  .modal-overlay {
+    padding: 0.75rem !important;
+  }
+
+  .booking-confirmation-content {
+    padding: 1.5rem 1rem !important;
+    max-height: 94vh !important;
+  }
+
+  .booking-modal-title {
+    font-size: 1.35rem !important;
+  }
+
+  .booking-summary-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+
+  .booking-summary-header > div:last-child {
+    text-align: left !important;
+  }
+
+  .booking-modal-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.6rem !important;
+  }
+
+  .booking-modal-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* Clean Media Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .booking-confirmation-overlay,
+  .booking-confirmation-content,
+  .booking-confirmation-content * {
+    visibility: visible !important;
+  }
+
+  .booking-confirmation-overlay {
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .booking-confirmation-content {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+    border: 2px solid #d4af37 !important;
+    box-shadow: none !important;
+    padding: 2rem !important;
+  }
+
+  .lightbox-close-btn,
+  .booking-modal-actions,
+  .demo-pill,
+  .copy-code-btn {
+    display: none !important;
+  }
+
+  .booking-confirmation-content h2,
+  .booking-confirmation-content h3,
+  .booking-confirmation-content div,
+  .booking-confirmation-content p,
+  .booking-confirmation-content span {
+    color: #111111 !important;
   }
 }
